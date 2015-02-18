@@ -992,7 +992,6 @@ A single Desks resource
             },
             _created: "2014-07-16T14:14:06+0000",
             type: "text",
-            _latest_version: 5,
             _updated: "2014-07-17T18:19:15+0000",
             firstcreated: "2014-07-16T14:14:06+0000",
             _version: 5,
@@ -1029,7 +1028,6 @@ A single Desks resource
             headline: "today's news 1",
             _updated: "2014-07-17T20:24:32+0000",
             firstcreated: "2014-07-16T14:14:06+0000",
-            _latest_version: 21,
             type: "text"
         }
 
@@ -1142,7 +1140,6 @@ A single Desks resource
             _version: 1,
             headline: "today's news 1",
             _updated: "2014-07-16T14:14:06+0000",
-            _latest_version: 2,
             _created: "2014-07-16T14:14:06+0000",
             type: "text",
             firstcreated: "2014-07-16T14:14:06+0000"
@@ -1182,7 +1179,6 @@ A single Desks resource
                     _version: 1,
                     headline: "today's news 1",
                     _updated: "2014-07-16T14:14:06+0000",
-                    _latest_version: 21,
                     _created: "2014-07-16T14:14:06+0000",
                     type: "text",
                     firstcreated: "2014-07-16T14:14:06+0000"
@@ -2035,7 +2031,6 @@ User level and session level preference by given session id
             },
             _created: "2014-07-16T14:14:06+0000",
             type: "text",
-            _latest_version: 5,
             _updated: "2014-07-17T18:19:15+0000",
             firstcreated: "2014-07-16T14:14:06+0000",
             _version: 5,
@@ -3153,7 +3148,6 @@ This endpoint allows the spiking of content
             "_created": "2014-12-10T05:02:43+0000",
             "_etag": "088999a217d2ad85831ed7bd356518029eb7e750",
             "_id": "item-1",
-            "_latest_version": 2,
             "_links": {
                 "collection": {"href": "/archive", "title": "archive"},
                 "parent": {"href": "/", "title": "home"},
@@ -3193,7 +3187,6 @@ This endpoint allows the unspiking of content
             "_created": "2014-12-10T05:20:34+0000",
             "_etag": "d7de5d608f51fe840cd8535fae5479b32c5e6565",
             "_id": "item-1",
-            "_latest_version": 3,
             "_links": {
                 "collection": {"href": "/archive", "title": "archive"},
                 "parent": {"href": "/", "title": "home"},
@@ -3231,7 +3224,6 @@ This endpoint allows the unspiking of content
             "_created": "2014-12-11T13:20:18+0000",
             "_etag": "194506956b64410edbf2e175a13adf3cc2df921d",
             "_id": "urn:newsml:localhost:2014-12-11T15:20:18.510755:65b31275-0513-4ee5-9879-1ef9fae5fa33",
-            "_latest_version": 3,
             "_links": {
                 "collection": {"href": "/packages", "title": "packages"},
                 "parent": {"href": "/", "title": "home"},
@@ -3418,7 +3410,6 @@ This endpoint allows the unspiking of content
             "_created": "2014-12-11T13:20:18+0000",
             "_etag": "194506956b64410edbf2e175a13adf3cc2df921d",
             "_id": "urn:newsml:localhost:2014-12-11T15:20:18.510755:65b31275-0513-4ee5-9879-1ef9fae5fa33",
-            "_latest_version": 3,
             "_links": {
                 "collection": {"href": "/packages", "title": "packages"},
                 "parent": {"href": "/", "title": "home"},
@@ -3461,3 +3452,45 @@ This endpoint allows the unspiking of content
             "version_creator": "5481aab74ee1f927e56944cc",
             "versioncreated": "2014-12-11T14:01:27+0000"
         }
+
+# Group Publishing Content
+
+## Publishing a content item [/archive/publish/{_id}]
+
+Endpoint for publishing content
+
+### Publish item [PATCH]
+
++ Parameters
+    - _id (string) ... Identifier of the item to be published
+
++ Response 200 (application/json)
+
+        {
+            "_created": "2014-12-10T05:02:43+0000",
+            "_etag": "088999a217d2ad85831ed7bd356518029eb7e750",
+            "_id": "item-1",
+            "_links": {
+                "collection": {"href": "/archive", "title": "archive"},
+                "parent": {"href": "/", "title": "home"},
+                "self": {"href": "/archive/item-1", "title": "Archive"}
+            },
+            "_updated": "2014-12-10T05:02:43+0000",
+            "_version": 2,
+            "expiry": "2014-12-10T10:02:43+0000",
+            "firstcreated": "2014-12-10T05:02:43+0000",
+            "guid": "item-1",
+            "headline": "test",
+            "language": "en",
+            "original_creator": "",
+            "pubstatus": "Usable",
+            "revert_state": "draft",
+            "state": "published",
+            "_type": "archive",
+            "type": "text",
+            "unique_id": 14347,
+            "unique_name": "#14347",
+            "version_creator": "",
+            "versioncreated": "2014-12-10T05:02:43+0000"
+        }
+
